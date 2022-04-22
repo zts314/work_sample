@@ -31,7 +31,6 @@ fi
 rsync -av --exclude='notebooks/output' --exclude='notebooks/output_class_balanced' ../manufacturer_identification $CONTEXT/manufacturer_identification
 rsync -av --exclude='../geological_similarity/output' ../geological_similarity $CONTEXT/geological_similarity
 
-cp README.md $CONTEXT
 cp Dockerfile $CONTEXT
 
 docker build -t $IMG:$TAG ./$CONTEXT

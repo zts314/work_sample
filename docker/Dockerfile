@@ -33,7 +33,6 @@ ENV FVCORE_CACHE="/tmp"
 RUN pip3 install seaborn scikit-learn pandas jupyter opencv-python rasterio
 RUN python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
 
-COPY README.md /
 COPY geological_similarity/ /home/appuser/geological_similarity
 COPY manufacturer_identification/ /home/appuser/manufacturer_identification
 

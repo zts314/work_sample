@@ -27,7 +27,7 @@ conda env create -f environment.yml
 
 ## Docker
 
-### 1. Build the container
+### 1. Build the container or pull from docker hub
 The `docker` folder in the root of this repository contains a bash script that will build a docker container with all necessary dependencies required 
 to run this repository. To build the docker container, from the root of this repository, run:
 
@@ -37,6 +37,12 @@ cd docker
 ```
 
 The build will take some time as Detectron2 requires Pycocotools, which leans on gcc (so I couldn't use a pre-built pytorch container, sadly).
+
+Alternatively, if you don't wish to build the container from scratch, the container can be pulled from docker hub using the following command:
+
+```
+docker pull zts314/work_sample:1.0.1
+```
 
 ### 2. Run the container
 

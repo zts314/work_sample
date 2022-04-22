@@ -1,4 +1,4 @@
-name: riverside
+name: work_sample
 channels:
   - pytorch
   - conda-forge
@@ -179,7 +179,6 @@ dependencies:
     - google-auth-oauthlib==0.4.6
     - grpcio==1.44.0
     - hydra-core==1.1.2
-    - importlib-resources==5.7.1
     - iopath==0.1.9
     - ipykernel==6.13.0
     - ipython==8.2.0
@@ -250,4 +249,4 @@ dependencies:
     - werkzeug==2.1.1
     - yacs==0.1.8
     - zipp==3.8.0
-prefix: /home/zack/anaconda3/envs/riverside
+prefix: /home/zack/anaconda3/envs/work_sample
