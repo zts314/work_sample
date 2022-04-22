@@ -1,4 +1,4 @@
-name: work_sample
+name: riverside
 channels:
   - pytorch
   - conda-forge
@@ -167,7 +167,8 @@ dependencies:
     - debugpy==1.6.0
     - decorator==5.1.1
     - defusedxml==0.7.1
-    - detectron2==0.6+cu113
+    - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+    - detectron2
     - entrypoints==0.4
     - executing==0.8.3
     - fastjsonschema==2.15.3
@@ -249,4 +250,4 @@ dependencies:
     - werkzeug==2.1.1
     - yacs==0.1.8
     - zipp==3.8.0
-prefix: /home/zack/anaconda3/envs/work_sample
+prefix: /home/zack/anaconda3/envs/riverside

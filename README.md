@@ -149,16 +149,34 @@ described in the Installation section.
 * Data: Converted to COCO, Custom WeightedRandomSampler
 * Model: Resnet50 Faster-RCNN FPN, COCO Pretrained weights
 
-# TODO: Paste in class-balanced results
+|   AP   |  AP50  |  AP75  |  APs  |  APm  |  APl   |
+|:------:|:------:|:------:|:-----:|:-----:|:------:|
+| 89.569 | 95.452 | 94.815 |  nan  | 0.000 | 89.585 |
+
+| category                 | AP     | category             | AP     | category             | AP     |
+|:-------------------------|:-------|:---------------------|:-------|:---------------------|:-------|
+| ATR                      | 94.710 | Airbus               | 92.614 | Antonov              | 92.915 |
+| Beechcraft               | 94.096 | Boeing               | 92.298 | Bombardier Aerospace | 86.161 |
+| British Aerospace        | 91.019 | Canadair             | 95.635 | Cessna               | 88.317 |
+| Cirrus Aircraft          | 90.179 | Dassault Aviation    | 92.970 | Dornier              | 94.756 |
+| Douglas Aircraft Company | 77.446 | Embraer              | 92.380 | Eurofighter          | 81.951 |
+| Fairchild                | 90.522 | Fokker               | 88.231 | Gulfstream Aerospace | 91.321 |
+| Ilyushin                 | 79.919 | Lockheed Corporation | 83.153 | Lockheed Martin      | 95.023 |
+| McDonnell Douglas        | 86.652 | Panavia              | 94.099 | Piper                | 83.636 |
+| Robin                    | 84.955 | Saab                 | 94.010 | Supermarine          | 81.291 |
+| Tupolev                  | 97.046 | Yakovlev             | 92.281 | de Havilland         | 87.500 |
 
 ### Future Directions
 
 Some obvious directions include obtaining more data to train on from publicly available datasets. Other more exotic 
 things to try include:
-1. Leveraging a smarter loss function. Something like Reduced Focal Loss, which won the xView competition back in 2018
+1. Train for longer. There is likely some more performance we can squeeze out of the baseline, but there are likely significant
+performance gains we can pull from the class balanced approach if we simply trained for longer. However, time and resources are
+limited.
+2. Leveraging a smarter loss function. Something like Reduced Focal Loss, which won the xView competition back in 2018
    (a notoriously long-tailed dataset), could help to overcome the class imbalance even better. That being said, this 
    would be more complex to implement as it would require modifying the Faster-RCNN FPN and Class head loss functions.
-2. Performing downstream classifier fusion. It would be interesting to take the detected bounding boxes/labels and 
+3. Performing downstream classifier fusion. It would be interesting to take the detected bounding boxes/labels and 
    construct a fusion approach (using logistic regression or something simple) that would ingest the output of WEFT 
    classifiers to help boost performance. The WEFT (Wings Engine Fuselage and Tail) classifiers would be downstream recognition
 models that would attempt to ingest the detected object chip and classify sum attributes about the aircraft (e.g. number of engines, 
