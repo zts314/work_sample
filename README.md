@@ -11,6 +11,8 @@ I don't consider them to be truly complete. However, Please consider my submissi
 All experimentation was done in the form of Jupyter notebooks for easy web-based rendering 
 (you can view it in this repository). There are some supporting scripts to create datasets for the detection task.
 
+I acknowledge that I didn't have to do two work samples, but I really enjoy working on these types of challenges and would
+really have attempted them all given more time. 
 ___
 # Installation
 
@@ -49,7 +51,13 @@ ______
 
 # Manufacturer Identification ("Complete") - At a Glance
 
-![Alt text](images/detection.png "Ground truth image ")
+| ![Alt text](images/detection.png "Ground truth image ") | 
+|:-------------------------------------------------------:| 
+|   *Predicted bounding box from my Detectron2 model.*    |
+
+
+
+
 
 ### How to train/evaluate
 
@@ -158,8 +166,13 @@ wingspan, engine type, etc.).
 
 # Geological Similarity ("Complete") - At a Glance
 
-![Alt text](images/TSNE.png "TSNE plot generated on mineral dataset")
-![Alt text](images/knn_retrieval.png "TSNE plot generated on mineral dataset")
+| ![Alt text](images/TSNE.png "TSNE plot generated on mineral dataset") |
+|:---------------------------------------------------------------------:| 
+|               *TSNE Produced by my supervised Resnet18*               |
+
+| ![Alt text](images/knn_retrieval.png "TSNE plot generated on mineral dataset") |
+|:------------------------------------------------------------------------------:| 
+|              *Input Image and Top 5 Nearest Neighbor Retrievals*               |
 
 ### How to run
 
