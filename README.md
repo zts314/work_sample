@@ -5,8 +5,8 @@ the parenthesis. As there are many more possibilities to explore (Focal loss, WE
 I don't consider them to be truly complete. However, Please consider my submissions in the following order 
 (in both time and GPU cycles spent):
 
-1. Manufacturer Identification - "Complete"
-2. Geological Similarity - "Complete"
+1. [Manufacturer Identification - "Complete"](#manufacturer-identification-complete---at-a-glance)
+2. [Geological Similarity - "Complete"](#geological-similarity-complete---at-a-glance)
 
 All experimentation was done in the form of Jupyter notebooks for easy web-based rendering 
 (you can view it in this repository). There are some supporting scripts to create datasets for the detection task.
@@ -47,7 +47,7 @@ docker run --rm -it --ipc=host -p 9000:9000 -v /path/to/data/on/host:/home/appus
 
 ______
 
-## Manufacturer Identification ("Complete") - At a Glance
+# Manufacturer Identification ("Complete") - At a Glance
 
 ![Alt text](images/detection.png "Ground truth image ")
 
@@ -156,7 +156,7 @@ things to try include:
 models that would attempt to ingest the detected object chip and classify sum attributes about the aircraft (e.g. number of engines, 
 wingspan, engine type, etc.).
 
-## Geological Similarity ("Complete") - At a Glance
+# Geological Similarity ("Complete") - At a Glance
 
 ![Alt text](images/TSNE.png "TSNE plot generated on mineral dataset")
 ![Alt text](images/knn_retrieval.png "TSNE plot generated on mineral dataset")
