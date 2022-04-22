@@ -16,42 +16,7 @@ really have attempted them all given more time.
 ___
 # Installation
 
-## Anaconda
-
-The `environment.yml` in the root of this directory can be used to create an anaconda environment. To setup this 
-repository using anaconda, run the following command from the root of the repository:
-
-```
-conda env create -f environment.yml
-```
-
-## Docker
-
-### 1. Build the container or pull from docker hub
-The `docker` folder in the root of this repository contains a bash script that will build a docker container with all necessary dependencies required 
-to run this repository. To build the docker container, from the root of this repository, run:
-
-```
-cd docker
-./build_docker.sh
-```
-
-The build will take some time as Detectron2 requires Pycocotools, which leans on gcc (so I couldn't use a pre-built pytorch container, sadly).
-
-Alternatively, if you don't wish to build the container from scratch, the container can be pulled from docker hub using the following command:
-
-```
-docker pull zts314/work_sample:1.0.1
-```
-
-### 2. Run the container
-
-The above commands will create a docker image called `zsteck:1.0.0`. To run the container, run the `run_container.sh` bash script. 
-If you wish to run the notebooks on your data, then please run the following command, taking care to mount your data directory:
-
-```
-docker run --rm -it --ipc=host -p 9000:9000 -v /path/to/data/on/host:/home/appuser/data zsteck:1.0.0
-```
+Instructions for installation and setup of the Anaconda or Docker environments can be found in [INSTALL.md](INSTALL.md)
 
 ______
 
@@ -60,10 +25,6 @@ ______
 | ![Alt text](images/detection.png "Ground truth image ") | 
 |:-------------------------------------------------------:| 
 |   *Predicted bounding box from my Detectron2 model.*    |
-
-
-
-
 
 ### How to train/evaluate
 
